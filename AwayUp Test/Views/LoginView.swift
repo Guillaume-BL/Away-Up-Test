@@ -16,6 +16,7 @@ struct LoginView: View {
     @State var mail: String = ""
     @State var pass: String = ""
     @State var sendToView = false
+    @State var toggle = true
     
     var body: some View {
         NavigationView {
@@ -47,6 +48,11 @@ struct LoginView: View {
                             .padding()
                             .background(lightGreyColor)
                             .cornerRadius(20.0)
+                        Toggle("Remember me", isOn: self.$toggle)
+                        .foregroundColor(Color.white)
+                        .padding([.leading, .trailing], 27.5)
+                        .shadow(radius: 10.0, x: 20, y: 10)
+                        
                     }.padding([.leading, .trailing], 27.5)
                     
                     
@@ -72,7 +78,7 @@ struct LoginView: View {
                             .background(Color.green)
                             .cornerRadius(15.0)
                             .shadow(radius: 10.0, x: 20, y: 10)
-                    }.padding(.top, 50)
+                    }.padding(.top, 20)
                     NavigationLink(destination: InfoView(), isActive: self.$sendToView) {
                         EmptyView()
                     }
