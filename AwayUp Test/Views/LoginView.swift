@@ -48,10 +48,11 @@ struct LoginView: View {
                             .padding()
                             .background(lightGreyColor)
                             .cornerRadius(20.0)
+                        
                         Toggle("Remember me", isOn: self.$toggle)
-                        .foregroundColor(Color.white)
-                        .padding([.leading, .trailing], 27.5)
-                        .shadow(radius: 10.0, x: 20, y: 10)
+                            .foregroundColor(Color.white)
+                            .padding([.leading, .trailing], 27.5)
+                            .shadow(radius: 10.0, x: 20, y: 10)
                         
                     }.padding([.leading, .trailing], 27.5)
                     
