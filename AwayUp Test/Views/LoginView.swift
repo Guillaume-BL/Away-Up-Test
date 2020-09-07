@@ -53,7 +53,6 @@ struct LoginView: View {
                             .foregroundColor(Color.white)
                             .padding([.leading, .trailing], 27.5)
                             .shadow(radius: 10.0, x: 20, y: 10)
-                        
                     }.padding([.leading, .trailing], 27.5)
                     
                     
